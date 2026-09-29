@@ -57,10 +57,10 @@ def main():
                 sys.exit()
 
             for s in shots:
-                if s.collides_with(a):
+                if a.collides_with(s):
                     log_event("asteroid_shot")
                     s.kill()
-                    a.kill()
+                    a.split()
 
 
 
